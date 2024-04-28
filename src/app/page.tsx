@@ -1,7 +1,7 @@
 "use client"
 
+import useNewsList from "@/hook/use-news-list";
 import News from "./components/news";
-import useNewsList from "./hook/use-news-list";
 import { format } from "date-fns"
 
 export default function Home() {
