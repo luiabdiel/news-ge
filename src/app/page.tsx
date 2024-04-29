@@ -3,13 +3,14 @@
 import useNewsList from "@/hook/use-news-list";
 import News from "./components/news";
 import { format } from "date-fns"
+import Container from "./components/container";
 
 export default function Home() {
   const { newsData } = useNewsList()
 
   return (
     <main>
-       <div className="flex flex-col p-8 m-auto max-w-3xl p-">
+       <Container>
         {newsData.map((news) => (
           <News
             key={news.title}
@@ -21,7 +22,7 @@ export default function Home() {
             source={news.source.name}
           />
         ))}
-       </div>
+       </Container>
     </main>
   );
 }
