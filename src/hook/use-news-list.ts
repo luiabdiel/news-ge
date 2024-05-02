@@ -1,9 +1,9 @@
 import { NewsData } from "@/Interface/news"
 import { useCallback, useEffect, useState } from "react"
-import { API_KEI, API_URL } from "../constants/environment"
+import { API_KEY, API_URL } from "../constants/environment"
 import axios from "axios"
 
-const URL_API = `${API_URL}top-headlines?category=technology&lang=pt&country=br&max=10&apikey=${API_KEI}`
+const URL_API = `${API_URL}top-headlines?category=technology&lang=pt&country=br&max=10&apikey=${API_KEY}`
 
 export default function useNewsList() {
   const [newsData, setNewsData] = useState<NewsData[]>([])
